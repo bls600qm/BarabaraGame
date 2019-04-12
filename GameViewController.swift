@@ -52,6 +52,9 @@ class GameViewController: UIViewController {
         if timer.isValid == true { //もしタイマーが動いてたら
             timer.invalidate() //タイマーを無効にする
         }
+        for i in 0..<3 {
+            score = score - abs(Int(width/2 - positionX[i]))*2
+        }
         resultLabel.text = "Score:" + String(score) //結果ラベルにスコアを表示する
         resultLabel.isHidden = false //結果ラベルを隠さない（表す）
         

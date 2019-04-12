@@ -142,10 +142,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="-156"/>
         </scene>
-        <!--View Controller-->
+        <!--Ranking View Controller-->
         <scene sceneID="BMC-cJ-rVK">
             <objects>
-                <viewController id="bjP-42-Oxr" sceneMemberID="viewController">
+                <viewController id="bjP-42-Oxr" customClass="RankingViewController" customModule="BarabaraGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SWf-hP-jOG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,6 +172,9 @@
                                 <state key="normal" title="Topへ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toTop" destination="bjP-42-Oxr" eventType="touchUpInside" id="1zg-hZ-4Yl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3位 ---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1JC-pK-Scz">
                                 <rect key="frame" x="88" y="296" width="181" height="91"/>
@@ -191,6 +194,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IFS-tZ-Yx2"/>
                     </view>
+                    <connections>
+                        <outlet property="rankingLabel1" destination="VYD-ed-4FG" id="CUO-kD-j2n"/>
+                        <outlet property="rankingLabel2" destination="QhJ-IR-3qK" id="qYc-EC-G04"/>
+                        <outlet property="rankingLabel3" destination="1JC-pK-Scz" id="3Di-hc-umz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PnZ-O2-BVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
