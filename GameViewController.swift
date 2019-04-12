@@ -25,15 +25,36 @@ class GameViewController: UIViewController {
     var positionX: [CGFloat] = [0.0, 0.0, 0.0] //画像の位置のは配列
     var dx: [CGFloat] = [1.0, 0.5, -1.0] //画像の動かす幅の配列
     
+    
+    
     func start(){
         //結果ラベルを見えなくする
         resultLabel.isHidden = true
         
         //タイマーを動かす
-        timer = Timer.scheduledTimer(timeInterval: 0.005, target: self, selector: #selector(self.up), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.005, target: self,selector: #selector(self.up), userInfo: nil, repeats: true)
         timer.fire()
-        
     }
+    
+    @objc func up() { //funcから始めるとエラーになる　@objcをつけるとなぜかいける
+        for i in 0..<3 {
+            if positionX[i] > width || positionX[i] < 0 {
+                dx[i] = dx[i] * (-1)
+            }
+            positionX[i] += dx[i]
+        }
+        imgView1.center.x = positionX[0]
+        imgView2.center.x = positionX[1]
+        imgView3.center.x = positionX[2]
+    }
+    
+    @IBAction func stop(){
+        if timer.isValid == true { //もしタイマーが動いてたら
+            timer.invalidate() //タイマーを無効にする
+        }
+    }
+    
+    
     
     
     

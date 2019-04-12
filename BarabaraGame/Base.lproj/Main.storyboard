@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="oYc-1N-pdu">
             <objects>
-                <viewController id="wIw-KY-gsf" sceneMemberID="viewController">
+                <viewController id="wIw-KY-gsf" customClass="GameViewController" customModule="BarabaraGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVD-Hb-edZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +105,9 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="stop" destination="wIw-KY-gsf" eventType="touchUpInside" id="igx-ct-JKw"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tail.png" translatesAutoresizingMaskIntoConstraints="NO" id="TMm-ez-fTn">
                                 <rect key="frame" x="172" y="79" width="30" height="215"/>
@@ -122,6 +125,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qg2-pC-Zaf"/>
                     </view>
+                    <connections>
+                        <outlet property="imgView1" destination="4MC-7u-l2i" id="i4l-JZ-9Th"/>
+                        <outlet property="imgView2" destination="6WL-9N-7X6" id="Qa1-e9-NXB"/>
+                        <outlet property="imgView3" destination="TMm-ez-fTn" id="Bfq-ku-NiH"/>
+                        <outlet property="resultLabel" destination="krd-5k-Yd0" id="9gH-IL-jaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdO-fa-kjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
