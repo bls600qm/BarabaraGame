@@ -52,9 +52,20 @@ class GameViewController: UIViewController {
         if timer.isValid == true { //もしタイマーが動いてたら
             timer.invalidate() //タイマーを無効にする
         }
+        resultLabel.text = "Score:" + String(score) //結果ラベルにスコアを表示する
+        resultLabel.isHidden = false //結果ラベルを隠さない（表す）
     }
     
-    
+    @IBAction func retry(){
+        score = 1000 //スコアの値をリセット
+        positionX = [width/2, width/2, width/2] //画像の位置を真ん中に戻す
+        if timer.isValid == false {
+            self.start() //スタートメソッド呼ぶ
+        }
+    }
+    @IBAction func toTop(){
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     

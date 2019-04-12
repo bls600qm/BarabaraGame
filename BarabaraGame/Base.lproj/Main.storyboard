@@ -87,6 +87,9 @@
                                 <state key="normal" title="Topへ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toTop" destination="wIw-KY-gsf" eventType="touchUpInside" id="R0f-lY-cYn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAs-jB-qgl">
                                 <rect key="frame" x="273" y="29" width="86" height="46"/>
@@ -96,6 +99,9 @@
                                 <state key="normal" title="リトライ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="retry" destination="wIw-KY-gsf" eventType="touchUpInside" id="XmQ-ef-XYW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29U-Ej-Mfd">
                                 <rect key="frame" x="144" y="418" width="86" height="46"/>
